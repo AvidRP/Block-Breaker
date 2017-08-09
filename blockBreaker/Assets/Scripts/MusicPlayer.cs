@@ -7,9 +7,6 @@ public class MusicPlayer : MonoBehaviour {
 	
 	void Awake () {
 		Debug.Log ("Music Player Awake " + GetInstanceID());
-	}
-	void Start () {
-		Debug.Log ("Music Player Start " + GetInstanceID());
 		
 		if(instance != null) {
 			Destroy(gameObject);
@@ -17,6 +14,11 @@ public class MusicPlayer : MonoBehaviour {
 			instance = this;
 			GameObject.DontDestroyOnLoad(gameObject);
 		}
+	}
+	void Start () {
+		Debug.Log ("Music Player Start " + GetInstanceID());
+		
+		
 		
 	}
 	
